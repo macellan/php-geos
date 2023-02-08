@@ -19,6 +19,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
     <name>Sandro Santilli</name>
     <user>strk</user>
     <email>strk@kbt.io</email>
+    <active>yes</active>
   </lead>
   <date>2016-01-19</date>
   <version>
