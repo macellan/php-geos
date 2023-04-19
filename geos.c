@@ -32,9 +32,7 @@
 
 /* Own stuff */
 #include "php_geos.h"
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_void, 0, 0, 0)
-ZEND_END_ARG_INFO()
+#include "arginfo.h"
 
 static ZEND_DECLARE_MODULE_GLOBALS(geos);
 static PHP_GINIT_FUNCTION(geos);
@@ -432,7 +430,7 @@ PHP_METHOD(Geometry, clipByRect);
 
 static zend_function_entry Geometry_methods[] = {
     PHP_ME(Geometry, __construct, arginfo_void, 0)
-    PHP_ME(Geometry, __toString, arginfo_void, 0)
+    PHP_ME(Geometry, __toString, arginfo_Geometry_toString, 0)
     PHP_ME(Geometry, project, arginfo_void, 0)
     PHP_ME(Geometry, interpolate, arginfo_void, 0)
     PHP_ME(Geometry, buffer, arginfo_void, 0)
